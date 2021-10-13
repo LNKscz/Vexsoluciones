@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Blog
+ * 
+ * @author Slava Yurthev
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<update id="Vexsoluciones_Linkser::linkser"
+			 title="Linkser"
+			 module="Magento_Backend"
+			 sortOrder="22"
+			 resource="Magento_Backend::content" />
+		
+
+		<add id="Vexsoluciones_Linkser::sectionpro"
+			 title="Ordenes"
+			 module="Vexsoluciones_Linkser" 
+			 sortOrder="0"
+			 parent="Vexsoluciones_Linkser::linkser"
+			 resource="Vexsoluciones_Linkser::sectionpro" />
+
+		<add id="Vexsoluciones_Linkser::listalinkser"
+			 title="Lista"
+			 module="Vexsoluciones_Linkser" 
+			 sortOrder="0"
+			 parent="Vexsoluciones_Linkser::sectionpro"
+			 action="vexsoluciones_linkser/linkser"
+			 resource="Vexsoluciones_Linkser::linkser" />
+
+
+	
+
+	</menu>
+</config>
