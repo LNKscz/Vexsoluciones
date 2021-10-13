@@ -5,7 +5,7 @@
  * @author Slava Yurthev
  */
 
-namespace Vexcarrier\Servientrega\Controller\Adminhtml\Servientrega;
+namespace Vexsoluciones\Linkser\Controller\Adminhtml\Linkser;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -17,7 +17,7 @@ class View extends Action
     protected $_resultPage;
     protected $_commentFactory;
 
-    public function __construct(Context $context, PageFactory $resultPageFactory, \Vexcarrier\Servientrega\Model\BrandFactory $brandFactory)
+    public function __construct(Context $context, PageFactory $resultPageFactory, \Vexsoluciones\Linkser\Model\BrandFactory $brandFactory)
     {
         parent::__construct($context);
         $this->_resultPageFactory = $resultPageFactory;
@@ -33,7 +33,7 @@ class View extends Action
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Vexcarrier_Servientrega::view');
+        return $this->_authorization->isAllowed('Vexsoluciones_Linkser::view');
     }
 
     public function getResultPage()
@@ -57,7 +57,7 @@ class View extends Action
 
             if (!count($rowData)) {
                 $this->messageManager->addError(__('This information does not exist.'));
-                $this->_redirect('Vexcarrier_Servientrega/servientega/index');
+                $this->_redirect('Vexsoluciones_Linkser/linkser/index');
 
                 return;
             } else {
